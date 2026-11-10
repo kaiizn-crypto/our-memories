@@ -1,0 +1,478 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #19070d;
+color: #f8e8ed;
+font-family: Georgia, serif;
+overflow-x: hidden;
+}
+
+.background {
+position: fixed;
+inset: 0;
+z-index: -1;
+background:
+    radial-gradient(circle at 20% 20%, #68213a, transparent 40%),
+    radial-gradient(circle at 80% 80%, #491327, transparent 45%),
+    #19070d;
+    }
+
+/* WELCOME SCREEN */
+
+#welcome-screen {
+position: fixed;
+inset: 0;
+z-index: 100;
+background: #19070d;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 25px;
+
+transition: opacity 1s, visibility 1s;
+ }
+
+#welcome-screen.hide {
+opacity: 0;
+visibility: hidden;
+}
+
+.welcome-small,
+.subtitle {
+color: #d99aaa;
+letter-spacing: 5px;
+font-size: 11px;
+}
+
+#welcome-screen h1 {
+font-size: clamp(38px, 7vw, 65px);
+color: #f4c5d0;
+margin: 30px 0;
+font-weight: normal;
+}
+
+#welcome-screen p:not(.welcome-small) {
+color: #c9a1ae;
+line-height: 2;
+}
+
+/* BUTTONS */
+
+button,
+.discover-button {
+border: 1px solid #b85b78;
+background: transparent;
+color: #f4c5d0;
+padding: 14px 30px;
+border-radius: 30px;
+
+cursor: pointer;
+
+font-family: Georgia, serif;
+letter-spacing: 2px;
+
+transition: 0.4s;
+text-decoration: none;
+}
+
+button:hover,
+.discover-button:hover {
+background: #842b49;
+box-shadow: 0 0 25px #9b3b5d;
+transform: translateY(-4px);
+}
+
+#welcome-screen button {
+margin-top: 40px;
+}
+
+/* MAIN CONTENT */
+
+#main-content {
+display: none;
+}
+
+/* NAVIGATION */
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 8%;
+}
+
+.logo {
+font-size: 25px;
+color: #e9aabd;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: #d9b5bf;
+text-decoration: none;
+font-size: 13px;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: white;
+}
+
+/* HOMEPAGE */
+
+.hero {
+min-height: 100vh;
+ display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 50px 20px;
+ }
+
+.hero h1 {
+font-size: clamp(55px, 9vw, 100px);
+font-weight: normal;
+color: #f4c5d0;
+margin: 30px 0;
+animation: fadeUp 1.5s ease;
+ }
+
+.hero-description {
+max-width: 450px;
+color: #d9b5bf;
+line-height: 2;
+margin-bottom: 40px;
+}
+
+/* MAIN PHOTO */
+
+.main-photo img {
+width: 270px;
+height: 350px;
+object-fit: cover;
+
+border-radius: 150px 150px 20px 20px;
+
+border: 2px solid #a84e6b;
+
+box-shadow: 0 0 40px #70233e;
+
+animation: floating 5s infinite ease-in-out;
+}
+
+.photo-caption {
+color: #c99aa9;
+font-style: italic;
+margin: 25px 0;
+}
+
+.discover-button {
+margin-top: 20px;
+display: inline-block;
+}
+
+/* LOVE LETTER */
+
+.letter-section,
+.memories-section,
+.timeline-section,
+.countdown-section,
+.ending {
+padding: 120px 8%;
+text-align: center;
+}
+
+h2 {
+color: #e9aabd;
+font-size: clamp(30px, 5vw, 48px);
+font-weight: normal;
+margin: 25px 0;
+}
+
+.section-description {
+color: #c9a1ae;
+line-height: 2;
+margin: 20px auto 40px;
+max-width: 500px;
+}
+
+.letter-box {
+max-width: 550px;
+margin: 40px auto 0;
+padding: 40px;
+
+background: rgba(100, 30, 55, 0.25);
+
+border: 1px solid #713047;
+border-radius: 15px;
+
+text-align: left;
+line-height: 2;
+
+color: #e2c0ca;
+
+display: none;
+
+animation: fadeUp 1s ease;
+}
+
+.letter-box.show {
+display: block;
+}
+
+.letter-box h3 {
+color: #e9aabd;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.signature {
+margin-top: 30px;
+font-style: italic;
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+gap: 30px;
+
+max-width: 1000px;
+
+margin: 50px auto;
+}
+
+.gallery-item {
+transition: 0.5s;
+overflow: hidden;
+}
+
+.gallery-item:hover {
+transform: translateY(-12px) scale(1.03);
+}
+
+.gallery-item img {
+width: 100%;
+height: 350px;
+object-fit: cover;
+
+border-radius: 12px;
+
+border: 1px solid #a84e6b;
+
+transition: 0.5s;
+}
+
+.gallery-item:hover img {
+box-shadow: 0 0 25px #9b3b5d;
+}
+
+.gallery-item p {
+margin-top: 15px;
+color: #d9b5bf;
+font-style: italic;
+}
+
+/* TIMELINE */
+
+.timeline {
+max-width: 550px;
+margin: 50px auto;
+border-left: 1px solid #a84e6b;
+
+text-align: left;
+}
+
+.timeline-item {
+padding: 10px 30px 45px;
+position: relative;
+}
+
+.timeline-item::before {
+content: “”;
+position: absolute;
+
+left: -7px;
+top: 17px;
+
+width: 13px;
+height: 13px;
+
+background: #d98ca5;
+
+border-radius: 50%;
+
+box-shadow: 0 0 15px #d98ca5;
+}
+
+.timeline-item h3 {
+color: #e9aabd;
+margin-bottom: 15px;
+}
+
+.timeline-item p {
+color: #c9a1ae;
+line-height: 1.8;
+}
+
+/* COUNTDOWN */
+
+#countdown {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+margin-top: 50px;
+}
+
+#countdown div {
+min-width: 90px;
+padding: 20px;
+border: 1px solid #713047;
+border-radius: 12px;
+
+background: rgba(100, 30, 55, 0.2);
+}
+
+#countdown span {
+display: block;
+color: #f4c5d0;
+font-size: 35px;
+}
+
+#countdown small {
+color: #c9a1ae;
+}
+
+/* ENDING */
+
+.ending p {
+color: #c9a1ae;
+line-height: 2;
+}
+
+/* FOOTER */
+
+footer {
+text-align: center;
+padding: 40px 20px;
+color: #a77a87;
+
+font-size: 11px;
+letter-spacing: 3px;
+}
+
+/* MUSIC PLAYER */
+
+.music-player {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 50;
+}
+
+.music-player button {
+background: #421526;
+font-size: 11px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp {
+    from {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes floating {
+    0%, 100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-15px);
+}
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+    nav {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 11px;
+}
+
+.main-photo img {
+    width: 230px;
+    height: 300px;
+}
+
+.letter-section,
+.memories-section,
+.timeline-section,
+.countdown-section,
+.ending {
+    padding: 85px 20px;
+}
+
+.letter-box {
+    padding: 25px;
+}
+
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item img {
+    height: 220px;
+}
+
+#countdown {
+    gap: 10px;
+}
+
+#countdown div {
+    min-width: 70px;
+    padding: 15px 10px;
+}
+
+#countdown span {
+    font-size: 25px;
+}

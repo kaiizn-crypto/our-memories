@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Favorite Person</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="welcome-small">A LITTLE SOMETHING FOR YOU</p>
+
+<h1>For My Favorite Girl</h1>
+
+<p>There is something I want you to see.</p>
+
+<button onclick="enterWebsite()">Enter My World</button>
+<nav>
+
+    <div class="logo">For Her</div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#letter">Letter</a>
+        <a href="#memories">Memories</a>
+        <a href="#timeline">Our Story</a>
+    </div>
+
+</nav>
+
+<!-- HOMEPAGE -->
+
+<section class="hero" id="home">
+
+    <p class="subtitle">MY FAVORITE PERSON</p>
+
+    <h1>She Blooms,<br>I Smile.</h1>
+
+    <p class="hero-description">
+
+        In a world full of temporary things,
+        you are someone I want to cherish
+        every single day.
+
+    </p>
+
+    <div class="main-photo">
+
+        <img src="mygirlfriend.jpg" alt="My favorite girl">
+
+    </div>
+
+    <p class="photo-caption">
+
+        The girl who makes my world beautiful.
+
+    </p>
+
+    <a href="#letter" class="discover-button">
+
+        Discover Something Special
+
+    </a>
+
+</section>
+
+<!-- LOVE LETTER -->
+
+<section class="letter-section" id="letter">
+
+    <p class="subtitle">A LETTER FROM MY HEART</p>
+
+    <h2>Something I Want You To Know</h2>
+
+    <p class="section-description">
+
+        Some feelings are difficult to put into words.
+        But I still want to try.
+
+    </p>
+
+    <button onclick="openLetter()" id="letter-button">
+
+        Open My Letter
+
+    </button>
+
+    <div class="letter-box" id="letter-box">
+
+        <h3>To My Favorite Girl</h3>
+
+        <p>
+
+            I don't know how to explain how much
+            you mean to me, but I hope my actions
+            can show you what words sometimes cannot.
+
+            <br><br>
+
+            Thank you for being part of my life.
+            Thank you for all the little moments,
+            the conversations, the laughs,
+            and even the ordinary days.
+
+            <br><br>
+
+            I don't need every day to be perfect.
+            I just want us to keep growing,
+            understanding each other,
+            and making beautiful memories together.
+
+            <br><br>
+
+            If there is one thing I hope you remember,
+            it is that you are someone truly special
+            to me.
+
+            <br><br>
+
+            With all my love.
+
+        </p>
+
+        <h3 class="signature">Forever Yours</h3>
+
+    </div>
+
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section class="memories-section" id="memories">
+
+    <p class="subtitle">LITTLE MOMENTS, BIG MEMORIES</p>
+
+    <h2>Our Memories</h2>
+
+    <p class="section-description">
+
+        Every picture holds a little piece of happiness.
+
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="memory1.jpg" alt="Memory 1">
+            <p>My favorite moment</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory2.jpg" alt="Memory 2">
+            <p>A beautiful day</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory3.jpg" alt="Memory 3">
+            <p>One of my favorites</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory4.jpg" alt="Memory 4">
+            <p>Another special memory</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory5.jpg" alt="Memory 5">
+            <p>My happiness</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory6.jpg" alt="Memory 6">
+            <p>Forever remembered</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory7.jpg" alt="Memory 7">
+            <p>A little piece of us</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="memory8.jpg" alt="Memory 8">
+            <p>My precious memory</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RELATIONSHIP TIMELINE -->
+
+<section class="timeline-section" id="timeline">
+
+    <p class="subtitle">EVERY CHAPTER MATTERS</p>
+
+    <h2>Our Little Story</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>The Beginning</h3>
+            <p>The day our story started.</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>Our First Memories</h3>
+
+            <p>All the little moments that became special.</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>Growing Together</h3>
+
+            <p>Learning, understanding, and choosing each other.</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>Our Next Chapter</h3>
+
+            <p>More memories waiting to be made.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ANNIVERSARY COUNTDOWN -->
+
+<section class="countdown-section">
+
+    <p class="subtitle">UNTIL OUR SECOND ANNIVERSARY</p>
+
+    <h2>Counting Every Moment</h2>
+
+    <div id="countdown">
+
+        <div>
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div>
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div>
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div>
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENDING -->
+
+<section class="ending">
+
+    <h2>My Favorite Place<br>Will Always Be With You.</h2>
+
+    <p>
+
+        Thank you for being part of my story.
+
+    </p>
+
+</section>
+
+<footer>
+
+    MADE WITH LOVE, JUST FOR YOU.
+
+</footer>
+
+
+    </button>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
