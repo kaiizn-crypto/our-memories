@@ -194,7 +194,6 @@ display: inline-block;
 .letter-section,
 .memories-section,
 .timeline-section,
-.countdown-section,
 .ending {
 padding: 120px 8%;
 text-align: center;
@@ -335,35 +334,6 @@ color: #c9a1ae;
 line-height: 1.8;
 }
 
-/* COUNTDOWN */
-
-#countdown {
-display: flex;
-justify-content: center;
-gap: 25px;
-flex-wrap: wrap;
-margin-top: 50px;
-}
-
-#countdown div {
-min-width: 90px;
-padding: 20px;
-border: 1px solid #713047;
-border-radius: 12px;
-
-background: rgba(100, 30, 55, 0.2);
-}
-
-#countdown span {
-display: block;
-color: #f4c5d0;
-font-size: 35px;
-}
-
-#countdown small {
-color: #c9a1ae;
-}
-
 /* ENDING */
 
 .ending p {
@@ -446,7 +416,6 @@ to {
 .letter-section,
 .memories-section,
 .timeline-section,
-.countdown-section,
 .ending {
     padding: 85px 20px;
 }
@@ -462,17 +431,4 @@ to {
 
 .gallery-item img {
     height: 220px;
-}
-
-#countdown {
-    gap: 10px;
-}
-
-#countdown div {
-    min-width: 70px;
-    padding: 15px 10px;
-}
-
-#countdown span {
-    font-size: 25px;
 }
